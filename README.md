@@ -1,6 +1,9 @@
-## SITE:  http://marcelo391.github.io
+# ONDE ME ENCONTRAR
 
-## LINKEDIN: https://www.linkedin.com/in/jrmarcelo/
 
-## YOUTUBE: https://www.youtube.com/user/marcelorde391/
+## - SITE:  http://marcelo391.github.io
+
+## - LINKEDIN: https://www.linkedin.com/in/jrmarcelo/
+
+## - YOUTUBE: https://www.youtube.com/user/marcelorde391/
 
