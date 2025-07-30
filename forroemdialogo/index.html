@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forró Em Diálogo</title>
+    <meta name="description" content="Aprende Forró em Lisboa e Almada com Camila Alves. Aulas regulares, para todos os níveis, com foco na conexão, musicalidade e técnica.">
+    <meta name="keywords" content="Forró, Forró em Lisboa, Forró em Almada, Aulas de Forró, Danças a Dois, Camila Alves, Active Following">
+    <meta name="author" content="Forró em Diálogo">
+
+
+    <!-- Open Graph (para partilha em redes sociais) -->
+    <meta property="og:title" content="Forró em Diálogo" />
+    <meta property="og:description" content="Aulas de Forró em Lisboa e Almada. Aprende com Camila Alves, professora e dançarina com foco em musicalidade, técnica e presença." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://forroemdialogo.com" />
+    <meta property="og:image" content="https://forroemdialogo.com/imagem-compartilhada.jpg" />
+
+    <!-- Twitter Card (se quiseres partilhar no Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forró em Diálogo">
+    <meta name="twitter:description" content="Aulas de Forró em Lisboa e Almada. Aprende com Camila Alves, Active Follower e referência em danças a dois.">
+    <meta name="twitter:image" content="https://forroemdialogo.com/imagem-compartilhada.jpg">
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  </head>
+  <body class="bg-white text-gray-800">
+    
+    <!-- Navbar -->
+    <nav class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+        <!-- Logo -->
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <h1 class="text-4xl font-extrabold italic text-red-600">Forró</h1>
+          <span class="text-gray-500 text-lg italic">em</span>
+          <h2 class="text-3xl font-light tracking-wide text-red-600">Diálogo</h2>
+        </a>
+
+        <!-- Language Switch + Mobile Button -->
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          
+          <!-- Language Switch Buttons -->
+          <div class="flex gap-2 items-center text-sm">
+            <button onclick="switchLang('en')" class="text-gray-600 hover:text-red-600 font-medium">EN</button>
+            <span class="text-gray-400">|</span>
+            <button onclick="switchLang('pt')" class="text-gray-600 hover:text-red-600 font-medium">PT</button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button data-collapse-toggle="navbar-sticky" type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-sticky" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Nav Links -->
+        <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
+          <ul
+            class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+
+            <li>
+              <a href="#hero"
+                class="block py-2 px-3 text-white bg-red-700 rounded-sm md:bg-transparent md:text-red-700 md:p-0 md:dark:text-red-500"
+                aria-current="page">
+                <span data-lang="en">Home</span>
+                <span data-lang="pt" class="hidden">Início</span>
+              </a>
+            </li>
+            <li>
+              <a href="#about"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                <span data-lang="en">About</span>
+                <span data-lang="pt" class="hidden">Sobre</span>
+              </a>
+            </li>
+            <li>
+              <a href="#events"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                <span data-lang="en">Events</span>
+                <span data-lang="pt" class="hidden">Eventos</span>
+              </a>
+            </li>
+            <li>
+              <a href="#classes"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                <span data-lang="en">Classes</span>
+                <span data-lang="pt" class="hidden">Aulas</span>
+              </a>
+            </li>
+            <li>
+              <a href="#price"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                <span data-lang="en">Pricing</span>
+                <span data-lang="pt" class="hidden">Preçário</span>
+              </a>
+            </li>
+            <li>
+              <a href="#contact"
+                class="block py-2 px-3 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-red-700 md:p-0 md:dark:hover:text-red-500 dark:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">
+                <span data-lang="en">Contact</span>
+                <span data-lang="pt" class="hidden">Contacto</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+
+    <!-- Hero Section -->
+    <section id="hero" class="bg-cover bg-center h-screen relative" style="background-image: url(assets/image2.jpg);">
+      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <div class="relative z-10 flex items-center justify-center h-full text-center px-4">
+        <div>
+          <h1 class="text-white text-5xl font-bold mb-4">
+            <span data-lang="en">Dance the Rhythm of Forró</span>
+            <span data-lang="pt" class="hidden">Dance ao ritmo do Forró</span>
+          </h1>
+          <p class="text-white text-xl mb-6">
+            <span data-lang="en">Join our vibrant community and learn the essence of Forró culture through dance.</span>
+            <span data-lang="pt" class="hidden">Junta-te à nossa comunidade vibrante e aprende a essência do Forró através da dança.</span>
+          </p>
+          <a href="#contact" class="px-6 py-3 bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition">
+            <span data-lang="en">Join Now</span>
+            <span data-lang="pt" class="hidden">Inscreva-te</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- About Section -->
+    <section class="py-20 bg-gray-50" id="about">
+      <div class="container mx-auto px-4 max-w-4xl text-center">
+        <h2 class="text-4xl font-bold text-red-600 mb-8">
+          <span data-lang="en">About Forró Em Diálogo</span>
+          <span data-lang="pt" class="hidden">Sobre o Forró Em Diálogo</span>
+        </h2>
+
+        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+          <span data-lang="en">
+            More than steps and choreography, <strong>Forró Em Diálogo</strong> is a space where dance becomes conversation. We celebrate forró as a living expression of Brazilian culture — built on rhythm, connection, and presence.
+          </span>
+          <span data-lang="pt" class="hidden">
+            Mais do que passos e coreografias, o <strong>Forró Em Diálogo</strong> é um espaço onde a dança se transforma em diálogo. Celebramos o forró como uma expressão viva da cultura brasileira — baseada no ritmo, na conexão e na presença.
+          </span>
+        </p>
+
+        <p class="text-lg text-gray-700 leading-relaxed">
+          <span data-lang="en">
+            Our approach goes beyond technique: we teach you to listen, to feel, and to connect with your partner through movement. Every dance is an exchange, and every class is a chance to discover something new.
+          </span>
+          <span data-lang="pt" class="hidden">
+            A nossa abordagem vai além da técnica: ensinamos a escutar, sentir e conectar-te com o teu par através do movimento. Cada dança é uma troca, e cada aula, uma nova descoberta.
+          </span>
+        </p>
+      </div>
+    </section>
+
+
+    <!-- Carousel (3 imagens visíveis) -->
+    <section class="py-16 bg-white" id="events">
+        <div class="container mx-auto px-4">
+            <h2 data-lang="en" class="text-3xl font-bold text-center mb-10">Event Highlights</h2>
+            <h2 data-lang="pt" class="text-3xl font-bold text-center mb-10">Eventos</h2>
+
+            <!-- Swiper -->
+            <div class="relative">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                  <!-- Slide 1 -->
+                  <div class="swiper-slide">
+                      <img src="assets/CAMEDICI_DIA01_77.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 1" />
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="swiper-slide">
+                      <img src="assets/image2.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 2" />
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="swiper-slide">
+                      <img src="assets/CAMEDICI_DIA01_85.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 3" />
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="swiper-slide">
+                      <img src="assets/image1.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 4" />
+                  </div>
+                  <!-- Slide 5 -->
+                  <div class="swiper-slide">
+                      <img src="assets/CAMEDICI_DIA01_214.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 5" />
+                  </div>~
+                  <!-- Slide 6 -->
+                  <div class="swiper-slide">
+                      <img src="assets/CAMEDICI_DIA01_142.jpg" class="w-full h-64 object-cover rounded-lg shadow-md" alt="Event 6" />
+                  </div>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-button-next text-red-600"></div>
+                <div class="swiper-button-prev text-red-600"></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!-- Courses Section -->
+  <section class="py-16 bg-gray-100" id="classes">
+    <div class="container mx-auto px-4">
+      <!-- Título Principal -->
+      <h2 class="text-3xl font-bold text-center mb-10" data-lang="en">Courses We Offer</h2>
+      <h2 class="text-3xl font-bold text-center mb-10 hidden" data-lang="pt">Cursos Disponíveis</h2>
+
+      <!-- Cursos -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+
+        <!-- Iniciação ao Forró -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-2xl font-semibold mb-2 text-red-600" data-lang="en">Forró Fundamentals</h3>
+          <h3 class="text-2xl font-semibold mb-2 text-red-600 hidden" data-lang="pt">Iniciação ao Forró</h3>
+
+          <p class="text-gray-700 mb-4" data-lang="en">
+            Perfect for beginners, this course introduces the basic steps, rhythm, and partner connection of forró in a relaxed and welcoming environment.
+          </p>
+          <p class="text-gray-700 mb-4 hidden" data-lang="pt">
+            Perfeito para principiantes, este curso introduz os passos básicos, o ritmo e a conexão com o par de forma descontraída e acolhedora.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">BUS Paragem Cultural</span>
+            <span class="bg-yellow-100 text-yellow-800 text-sm font-medium px-3 py-1 rounded-full">AlmaDança</span>
+            <span class="bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">DanceFactory</span>
+          </div>
+        </div>
+
+        <!-- Forró em Diálogo -->
+        <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="text-2xl font-semibold mb-2 text-red-600" data-lang="en">Forró in Dialogue</h3>
+          <h3 class="text-2xl font-semibold mb-2 text-red-600 hidden" data-lang="pt">Forró em Diálogo</h3>
+
+          <p class="text-gray-700 mb-4" data-lang="en">
+            A unique experience focused on presence, musicality, and conversation through movement. Learn to lead and follow with awareness, fluidity, and authentic expression.
+          </p>
+          <p class="text-gray-700 mb-4 hidden" data-lang="pt">
+            Uma experiência única centrada na presença, musicalidade e diálogo através do movimento. Aprende a conduzir e seguir com consciência, fluidez e expressão autêntica.
+          </p>
+
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">BUS Paragem Cultural</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-seção: Horários e Datas -->
+<div class="max-w-4xl mx-auto mt-12">
+  <div class="bg-white shadow-lg rounded-lg p-8">
+    <h3 class="text-2xl font-bold text-red-600 mb-6" data-lang="en">Schedules & Dates</h3>
+    <h3 class="text-2xl font-bold text-red-600 mb-6 hidden" data-lang="pt">Horários e Datas</h3>
+
+    <!-- Duração -->
+    <div class="mb-8">
+      <div class="flex items-center gap-2 mb-2 text-gray-700">
+        <svg class="w-5 h-5 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <p class="text-sm" data-lang="en"><strong>Course Duration:</strong> September 15 – December 3</p>
+        <p class="text-sm hidden" data-lang="pt"><strong>Duração do Curso:</strong> 15 de Setembro – 3 de Dezembro</p>
+      </div>
+    </div>
+
+    <!-- Locais e horários -->
+    <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-700">
+      
+      <!-- AlmaDança -->
+      <div class="bg-gray-50 rounded-lg p-4 border">
+        <h4 class="font-semibold text-red-600 mb-1" data-lang="en">AlmaDança</h4>
+        <h4 class="font-semibold text-red-600 mb-1 hidden" data-lang="pt">AlmaDança</h4>
+        
+        <p class="mt-1 text-gray-500" data-lang="en">Forró Fundamentals</p>
+        <p class="mt-1 text-gray-500 hidden" data-lang="pt">Iniciação ao Forró</p>
+
+        <p data-lang="en">Wednesdays · 19:00 – 20:00</p>
+        <p class="hidden" data-lang="pt">Quartas · 19:00 – 20:00</p>
+      </div>
+
+      <!-- DanceFactory / Campolide -->
+      <div class="bg-gray-50 rounded-lg p-4 border">
+        <h4 class="font-semibold text-red-600 mb-1" data-lang="en">DanceFactory (Campolide)</h4>
+        <h4 class="font-semibold text-red-600 mb-1 hidden" data-lang="pt">DanceFactory (Campolide)</h4>
+
+        <p class="mt-1 text-gray-500" data-lang="en">Forró Fundamentals</p>
+        <p class="mt-1 text-gray-500 hidden" data-lang="pt">Iniciação ao Forró</p>
+
+        <p data-lang="en">Mondays · 19:00 – 20:00</p>
+        <p class="hidden" data-lang="pt">Segundas · 19:00 – 20:00</p>
+        
+      </div>
+
+      <!-- BUS Paragem Cultural -->
+      <div class="bg-gray-50 rounded-lg p-4 border">
+        <h4 class="font-semibold text-red-600 mb-1" data-lang="en">BUS Paragem Cultural</h4>
+        <h4 class="font-semibold text-red-600 mb-1 hidden" data-lang="pt">BUS Paragem Cultural</h4>
+
+        <p class="mt-1 text-gray-500" data-lang="en">Forró Fundamentals</p>
+        <p class="mt-1 text-gray-500 hidden" data-lang="pt">Iniciação ao Forró</p>
+        <p data-lang="en"> Tuesdays  · 18:00 – 19:15 </p>
+        <p class="hidden" data-lang="pt"> Terças  · 18:00 – 19:15 </p>
+
+        <p class="mt-1 text-gray-500" data-lang="en">Forró in Dialogue</p>
+        <p class="mt-1 text-gray-500 hidden" data-lang="pt">Forró em Diálogo</p>
+        <p data-lang="en"> Tuesdays  · 20:15 – 21:30 </p>
+        <p class="hidden" data-lang="pt"> Terças  · 20:15 – 21:30 </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- Price Section-->
+  <section class="py-20 bg-white" id="price">
+    <div class="container mx-auto px-4 max-w-5xl text-center">
+      <h2 class="text-3xl font-bold text-red-600 mb-4" data-lang="en">Pricing</h2>
+      <h2 class="text-3xl font-bold text-red-600 mb-4 hidden" data-lang="pt">Preçário</h2>
+
+      <p class="text-gray-700 text-lg mb-10" data-lang="en">
+        Choose the plan that works best for your rhythm.
+      </p>
+      <p class="text-gray-700 text-lg mb-10 hidden" data-lang="pt">
+        Escolhe o plano que melhor se adapta ao teu ritmo.
+      </p>
+
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Single Class -->
+        <div class="border rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2" data-lang="en">Single Class</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-lang="pt">Aula Avulso</h3>
+
+          <p class="text-4xl font-bold text-red-600 mb-2">€15</p>
+          <p class="text-gray-600 mb-4" data-lang="en">Drop-in anytime and enjoy one full class.</p>
+          <p class="text-gray-600 mb-4 hidden" data-lang="pt">Vem quando quiseres e participa numa aula completa.</p>
+        </div>
+
+        <!-- Pack (4 classes) -->
+        <div class="border rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2" data-lang="en">Pack – 4 Classes</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-lang="pt">Pack – 4 Aulas</h3>
+
+          <p class="text-4xl font-bold text-red-600 mb-2">€40</p>
+          <p class="text-gray-700 mb-4" data-lang="en">A flexible option to attend four classes at your pace.</p>
+          <p class="text-gray-700 mb-4 hidden" data-lang="pt">Uma opção flexível para frequentares quatro aulas ao teu ritmo.</p>
+        </div>
+
+        <!-- Complete -->
+        <div class="border rounded-lg shadow p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold mb-2" data-lang="en">Complete – 12 Classes</h3>
+          <h3 class="text-xl font-semibold mb-2 hidden" data-lang="pt">Completo – 12 Aulas</h3>
+
+          <p class="text-4xl font-bold text-red-600 mb-2">€130</p>
+          <p class="text-gray-600 mb-4" data-lang="en">Ideal for immersive learning and deeper practice.</p>
+          <p class="text-gray-600 mb-4 hidden" data-lang="pt">Ideal para um aprendizado mais imersivo e prática aprofundada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+    <!-- Contact Form -->
+  <section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-10 text-red-600" data-lang="en">Get in Touch</h2>
+      <h2 class="text-3xl font-bold text-center mb-10 text-red-600 hidden" data-lang="pt">Fala Connosco</h2>
+
+      <form class="max-w-2xl mx-auto bg-white p-8 rounded shadow space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700" data-lang="en">Your Name</label>
+          <label for="name" class="block text-sm font-medium text-gray-700 hidden" data-lang="pt">O Teu Nome</label>
+          <input type="text" id="name" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="Jane Doe" required>
+        </div>
+
+        <div>
+          <label for="email" class="block text-sm font-medium text-gray-700" data-lang="en">Your Email</label>
+          <label for="email" class="block text-sm font-medium text-gray-700 hidden" data-lang="pt">O Teu Email</label>
+          <input type="email" id="email" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="you@example.com" required>
+        </div>
+
+        <div>
+          <label for="message" class="block text-sm font-medium text-gray-700" data-lang="en">Message</label>
+          <label for="message" class="block text-sm font-medium text-gray-700 hidden" data-lang="pt">Mensagem</label>
+          <textarea id="message" rows="4" class="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-red-500 focus:border-red-500" placeholder="I'm interested in beginner classes..."></textarea>
+        </div>
+
+        <button type="submit" class="w-full py-3 bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition" data-lang="en">Send Message</button>
+        <button type="submit" class="w-full py-3 bg-red-600 text-white font-semibold rounded hover:bg-red-700 transition hidden" data-lang="pt">Enviar Mensagem</button>
+      </form>
+    </div>
+  </section>
+
+
+    <!-- Maps -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 data-lang="en" class="text-3xl font-bold text-center mb-10">Where to Find Us</h2>
+        <h2 data-lang="pt" class="text-3xl font-bold text-center mb-10">Onde encontrar-nos</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- BUS Paragem Cultural -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center text-red-600">BUS Paragem Cultural</h3>
+            <div class="w-full h-64">
+              <iframe 
+                class="w-full h-full rounded shadow"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6225.38890063271!2d-9.135791124523744!3d38.72482355686906!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933901811ab0b%3A0x49123e84d24be6cd!2sBUS%20-%20Paragem%20Cultural!5e0!3m2!1spt-BR!2ses!4v1753891953579!5m2!1spt-BR!2ses"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- AlmaDança -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center text-red-600">AlmaDança</h3>
+            <div class="w-full h-64">
+              <iframe 
+                class="w-full h-full rounded shadow"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3115.175303555375!2d-9.165584224526484!3d38.66783906021723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19351e64def771%3A0xe7b0e37de2dc8177!2sAlmadan%C3%A7a%20-%20Escola%20de%20Dan%C3%A7a%20de%20Almada!5e0!3m2!1spt-BR!2ses!4v1753892082814!5m2!1spt-BR!2ses"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+
+          <!-- DanceFactory -->
+          <div>
+            <h3 class="text-xl font-semibold text-gray-800 mb-2 text-center text-red-600">Dance Factory Studios</h3>
+            <div class="w-full h-64">
+              <iframe 
+                class="w-full h-full rounded shadow"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6224.975923283626!2d-9.166418824523475!3d38.72956335659044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19336ba0ec2ffd%3A0x2740b46d2a8a67a1!2sDance%20Factory%20Studios!5e0!3m2!1spt-BR!2ses!4v1753892161535!5m2!1spt-BR!2ses"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+      <div class="container mx-auto px-4 text-center">
+        <p>&copy; 2025 Forró Em Diálogo. All rights reserved.</p>
+      </div>
+      <div class="text-center mt-3">
+          <p class="">Apoio:</p>
+            <div class="flex justify-center gap-6 items-center">
+              <img src="assets/forrowithcamila.png" alt="Forro With Camila Logo" class="h-20">
+             
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+            0: {
+              slidesPerView: 1,
+              },
+            768: {
+              slidesPerView: 2,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }
+        });
+      </script>
+      <script>
+        function switchLang(lang) {
+          document.querySelectorAll('[data-lang]').forEach(el => {
+            el.classList.toggle('hidden', el.getAttribute('data-lang') !== lang);
+          });
+          localStorage.setItem('preferredLang', lang);
+        }
+
+        // Optional: keep language on reload
+        window.addEventListener('DOMContentLoaded', () => {
+          const savedLang = localStorage.getItem('preferredLang') || 'en';
+          switchLang(savedLang);
+        });
+      </script>
+
+
+
+    </body>
+</html>
