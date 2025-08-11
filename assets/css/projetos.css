@@ -1,0 +1,118 @@
+#projects {
+  padding: 100px 0;
+  background-color: rgba(27, 163, 156, 0.05);
+  color: #222;
+  font-weight: 300;
+}
+
+#projects h2 {
+  text-transform: uppercase;
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 60px;
+  color: #1ba39c;
+}
+/* 
+#faProjeto{
+  color: black;
+}
+
+.btn-circleProjeto {
+	width:50px;
+	height:50px;
+	margin-top:15px;
+	line-height:40px;
+	text-align:center;
+	border:2px solid #000;
+	border-radius:100%!important;
+	font-size:20px;
+	color:#000;
+	background:0 0;
+	-webkit-transition:background .3s ease-in-out;
+	-moz-transition:background .3s ease-in-out;
+	transition:background .3s ease-in-out;
+}
+.btn-circleProjeto:hover,.btn-circleProjeto:focus {
+	outline:0;
+	color:#fff;
+	background:rgba(255,255,255,.1);
+} */
+
+.projects-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-item {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+  padding: 20px 15px;
+  flex: 1;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+}
+
+.project-item img.project-img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.project-item h3 {
+  font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem; /* título menor */
+  margin-bottom: 10px;
+  color: #117a68;
+}
+
+.project-item p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project-item a {
+  color: blue;          /* Cor azul padrão */
+  text-decoration: underline;  /* Sublinhado */
+  font-weight: normal;  /* peso normal, se quiser */
+  cursor: pointer;      /* deixa cursor de link */
+}
+
+/* Se quiser, pode até adicionar hover */
+.project-item a:hover {
+  color: darkblue;
+  text-decoration: underline;
+}
+
+
+/* Responsividade */
+@media (max-width: 991px) {
+  .projects-list {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .project-item {
+    margin-bottom: 30px;
+  }
+
+  .project-item:last-child {
+    margin-bottom: 0;
+  }
+}
